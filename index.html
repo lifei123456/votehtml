@@ -1,0 +1,473 @@
+﻿<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="微信活动" />
+	<meta id="view" name="viewport" content="target-densitydpi=device-dpi, width=640px, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="stylesheet" href="./css/main.css">
+	<script src="./js/jquery-2.1.4.js"></script>
+
+	<title>微信活动</title>
+	<style type="text/css">
+		.myButton2 {
+	-moz-box-shadow: 0px 0px 0px 0px #3dc21b;
+	-webkit-box-shadow: 0px 0px 0px 0px #3dc21b;
+	box-shadow: 0px 0px 0px 0px #3dc21b;
+	background-color:#44c767;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	display:inline-block;
+	
+	color:#ffffff;
+	font-family:Arial;
+	font-size:30px;
+	padding:8px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 17px #2f6627;
+	margin-top: -50px;
+    margin-bottom: 20px;
+    width: 77%;
+    margin-left: 6%;
+    margin-right: auto;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+	</style>
+</head>
+<script>
+    var DEFAULT_WIDTH = 640,
+        ua = navigator.userAgent.toLowerCase(), // 根据 user agent 的信息获取浏览器信息
+        deviceWidth = window.screen.width, // 设备的宽度
+        devicePixelRatio = window.devicePixelRatio || 1, // 物理像素和设备独立像素的比例，默认为1
+        targetDensitydpi;
+    // Android4.0以下手机不支持viewport的width，需要设置target-densitydpi
+    if (ua.indexOf("android") !== -1 && parseFloat(ua.slice(ua.indexOf("android")+8)) < 4) {
+        targetDensitydpi = DEFAULT_WIDTH / deviceWidth * devicePixelRatio * 160;
+        document.getElementById('view').setAttribute('content', 'target-densitydpi=' + targetDensitydpi + ', width=device-width, user-scalable=no');
+    }
+</script>
+<style type="text/css">
+	@-webkit-keyframes yb
+	{
+		0%
+		{
+			opacity: 1
+		}
+
+		to
+		{
+			opacity: 0
+		}
+	}
+
+	@keyframes yb
+	{
+		0%
+		{
+			opacity: 1
+		}
+
+		to
+		{
+			opacity: 0
+		}
+	}
+
+	.uil-default-css>div:nth-of-type(1)
+	{
+		-webkit-animation: yb 1s linear infinite;
+		animation: yb 1s linear infinite;
+		-webkit-animation-delay: -.5s;
+		animation-delay: -.5s
+	}
+
+	.uil-default-css>div:nth-of-type(2)
+	{
+		-webkit-animation: yb 1s linear infinite;
+		animation: yb 1s linear infinite;
+		-webkit-animation-delay: -.4166666666666667s;
+		animation-delay: -.4166666666666667s
+	}
+
+	.uil-default-css>div:nth-of-type(3)
+	{
+		-webkit-animation: yb 1s linear infinite;
+		animation: yb 1s linear infinite;
+		-webkit-animation-delay: -.33333333333333337s;
+		animation-delay: -.33333333333333337s
+	}
+
+	.uil-default-css>div:nth-of-type(4)
+	{
+		-webkit-animation: yb 1s linear infinite;
+		animation: yb 1s linear infinite;
+		-webkit-animation-delay: -.25s;
+		animation-delay: -.25s
+	}
+
+	.uil-default-css>div:nth-of-type(5)
+	{
+		-webkit-animation: yb 1s linear infinite;
+		animation: yb 1s linear infinite;
+		-webkit-animation-delay: -.16666666666666669s;
+		animation-delay: -.16666666666666669s
+	}
+
+	.uil-default-css>div:nth-of-type(6)
+	{
+		-webkit-animation: yb 1s linear infinite;
+		animation: yb 1s linear infinite;
+		-webkit-animation-delay: -.08333333333333331s;
+		animation-delay: -.08333333333333331s
+	}
+
+	.uil-default-css>div:nth-of-type(7)
+	{
+		-webkit-animation: yb 1s linear infinite;
+		animation: yb 1s linear infinite;
+		-webkit-animation-delay: 0s;
+		animation-delay: 0s
+	}
+
+	.uil-default-css>div:nth-of-type(8)
+	{
+		-webkit-animation: yb 1s linear infinite;
+		animation: yb 1s linear infinite;
+		-webkit-animation-delay: .08333333333333337s;
+		animation-delay: .08333333333333337s
+	}
+
+	.uil-default-css>div:nth-of-type(9)
+	{
+		-webkit-animation: yb 1s linear infinite;
+		animation: yb 1s linear infinite;
+		-webkit-animation-delay: .16666666666666663s;
+		animation-delay: .16666666666666663s
+	}
+
+	.uil-default-css>div:nth-of-type(10)
+	{
+		-webkit-animation: yb 1s linear infinite;
+		animation: yb 1s linear infinite;
+		-webkit-animation-delay: .25s;
+		animation-delay: .25s
+	}
+
+	.uil-default-css>div:nth-of-type(11)
+	{
+		-webkit-animation: yb 1s linear infinite;
+		animation: yb 1s linear infinite;
+		-webkit-animation-delay: .33333333333333337s;
+		animation-delay: .33333333333333337s
+	}
+
+	.uil-default-css>div:nth-of-type(12)
+	{
+		-webkit-animation: yb 1s linear infinite;
+		animation: yb 1s linear infinite;
+		-webkit-animation-delay: .41666666666666663s;
+		animation-delay: .41666666666666663s
+	}
+
+	.uil-default-css
+	{
+		width: 36px;
+		height: 36px
+	}
+
+	.uil-default-css-container
+	{
+		background: rgba(40,40,40,.75);
+		position: fixed;
+		top: 40%;
+		left: 50%;
+		margin-left: -100px;
+		z-index: 1;
+		color: #fff
+	}
+
+	.progress>.uil-default-css-container
+	{
+		width: 75pt;
+		height: 75pt;
+		top: 35%;
+		left: 50%;
+		margin-left: -100px;
+	}
+
+	.progress>.uil-default-css-container>.uil-default-css
+	{
+		width: 5pc;
+		height: 70px
+	}
+
+	.progress>.uil-default-css-container>.uil-default-p
+	{
+		font-size: 13px;
+		text-align: center
+	}
+	.backdrop{
+		z-index:9999999;
+		background: rgba(0,0,0,.5);
+		bottom: 0;
+		left: 0;
+		position: fixed;
+		right: 0;
+		top: 0;
+		transition: opacity .15s linear 0s;
+		margin: 0;
+		padding: 0;
+		border: none;
+		outline: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	.wait{
+		margin: 0;
+		padding: 0;
+		border: none;
+		outline: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	.uil-default-css-container{
+		margin: 0;
+		width: 200px;
+		min-height: 200px;
+		background: rgba(40,40,40,.75);
+		position: fixed;
+		top: 40%;
+		left: 50%;
+		margin-left: -100px;
+		z-index: 1;
+		color: #fff;
+		padding: 0;
+		border: none;
+		outline: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;    -webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+	.uil-default-css{
+		width: 36px;
+		height: 36px;
+		margin-left: 58px;
+		margin-top: 32px;
+		padding: 0;
+		border: none;
+		outline: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;    -webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+</style>
+<body>
+<!--<div style="width: 100%;height: 100%;position: fixed;background-color: #36c040;z-index: 9999999">-->
+
+<!--</div>-->
+<section class="wait" style="display:;">
+	<div class="backdrop" style=""></div>
+	<div class="uil-default-css-container" style="">
+		<div class="uil-default-css" style="transform:scale(0.2);">
+			<div style="top:52px;left:78px;width:60px;height:400px;background:#d1d1d5;-webkit-transform:rotate(0deg) translate(0,-600px);transform:rotate(0deg) translate(0,-300px);border-radius:10px;position:absolute"></div>
+			<div style="top:52px;left:78px;width:60px;height:400px;background:#d1d1d5;-webkit-transform:rotate(30deg) translate(0,-600px);transform:rotate(30deg) translate(0,-300px);border-radius:10px;position:absolute"></div>
+			<div style="top:52px;left:78px;width:60px;height:400px;background:#d1d1d5;-webkit-transform:rotate(60deg) translate(0,-600px);transform:rotate(60deg) translate(0,-300px);border-radius:10px;position:absolute"></div>
+			<div style="top:52px;left:78px;width:60px;height:400px;background:#d1d1d5;-webkit-transform:rotate(90deg) translate(0,-600px);transform:rotate(90deg) translate(0,-300px);border-radius:10px;position:absolute"></div>
+			<div style="top:52px;left:78px;width:60px;height:400px;background:#d1d1d5;-webkit-transform:rotate(120deg) translate(0,-600px);transform:rotate(120deg) translate(0,-300px);border-radius:10px;position:absolute"></div>
+			<div style="top:52px;left:78px;width:60px;height:400px;background:#d1d1d5;-webkit-transform:rotate(150deg) translate(0,-600px);transform:rotate(150deg) translate(0,-300px);border-radius:10px;position:absolute"></div>
+			<div style="top:52px;left:78px;width:60px;height:400px;background:#d1d1d5;-webkit-transform:rotate(180deg) translate(0,-600px);transform:rotate(180deg) translate(0,-300px);border-radius:10px;position:absolute"></div>
+			<div style="top:52px;left:78px;width:60px;height:400px;background:#d1d1d5;-webkit-transform:rotate(210deg) translate(0,-600px);transform:rotate(210deg) translate(0,-300px);border-radius:10px;position:absolute"></div>
+			<div style="top:52px;left:78px;width:60px;height:400px;background:#d1d1d5;-webkit-transform:rotate(240deg) translate(0,-600px);transform:rotate(240deg) translate(0,-300px);border-radius:10px;position:absolute"></div>
+			<div style="top:52px;left:78px;width:60px;height:400px;background:#d1d1d5;-webkit-transform:rotate(270deg) translate(0,-600px);transform:rotate(270deg) translate(0,-300px);border-radius:10px;position:absolute"></div>
+			<div style="top:52px;left:78px;width:60px;height:400px;background:#d1d1d5;-webkit-transform:rotate(300deg) translate(0,-600px);transform:rotate(300deg) translate(0,-300px);border-radius:10px;position:absolute"></div>
+			<div style="top:52px;left:78px;width:60px;height:400px;background:#d1d1d5;-webkit-transform:rotate(330deg) translate(0,-600px);transform:rotate(330deg) translate(0,-300px);border-radius:10px;position:absolute"></div>
+		</div>
+	</div>
+</section>
+<div class="wrap" id="wraper">
+
+
+	<div class="header">
+		<div class="header1 icon"></div>
+		<div class="header2 icon"></div>
+	</div>
+	<div class="content">
+		<div class="main box" id="main">
+			<div class="main-hd main-hd-style">
+				<h2>愚人节福利来啦~</h2><!--前500名送888元体验金999-->
+				<p>宝宝们，把下面链接中的文章转发到朋友圈，然后再上传朋友圈截图+手机号，只要参加就送随机成长值，还有机会获得500元京东购物卡1张、荷小包公仔或520体验金哦~</p><!--关注微信公众号参与讨论，前500名参加活动送888体验金，不要再错过啦~-->
+			</div>
+			<div class="item mt38 linkContanier">
+				<div class="noLinkTitle icon icon-link"></div>
+				<div class="text">
+					<h3 class="mb25 noLinkTitle">点击以下链接，转发到朋友圈并截图</h3>
+					<a class="link" href="">
+						<h4 class="link-hd">这里有足够让你尖叫的惊喜啊啊啊！</h4><!--爱占便宜能赚钱吗？-->
+						<div class="link-bd">
+							<div class="pic">
+								<img src="http://hebao-activity.oss-cn-shenzhen.aliyuncs.com/weixin/46/manage/ecb3046b-8acf-4203-9f7f-9a5c9c744f5f.bmp"/>
+							</div>
+							<div class="link-text">
+								戳我戳我戳我！<!--快来，前500个吐槽有奖哦~-->
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="box-link1" style="display:none">
+			<b></b>
+		</div>
+
+		<div class="box hide" id="winnersContanier"></div>
+		<div class="box hide resultContanier" id="resultContanier"></div>
+		<div class="box explain"  >
+			<div class="box-link icon"></div>
+
+			<p id="tellMe" style="color:#fbad04;text-align: center;margin-top:40px;font-size: 28px">点我上传</p>
+			<div id="pic" style="margin-left: 20%;width:55%;height:400px;background-image:url(./img/upload.png);background-repeat:no-repeat;background-size: 100% 100%;">
+				<input type="file" id="file" style="height:197px;background-image:url(./img/upload.jpg);background-repeat:no-repeat;background-size: 100% 100%;opacity: 0"
+					   accept="image/gif,image/jpeg,image/jpg,image/png" name="file" >
+			</div>
+			<img id="image" src="" width="500" height="200" style="display: none"/><br/>
+		</div>
+		<div class="box explain">
+			<div class="box-link icon"></div>
+			<h3>
+				活动时间
+			</h3>
+			<p>
+				3月31日-4月2日
+			</p>
+			<h3>
+				活动奖励
+			</h3>
+			<p>
+				1、参加活动就送随机成长值<br />
+				2、500元京东购物卡1张（10名）<br />
+				3、荷小包公仔1个（50名）&nbsp;<br />
+				4、520体验金（3000名）
+			</p>
+			<h3>
+				特别说明
+			</h3>
+			<p>
+				本活动最终解释权归荷包金融所有，如有疑问，请在APP菜单栏“我”-“荷包服务”-“用户反馈”里反馈你的问题。
+			</p>
+			<p>4月14日-4月15日</p>-->
+		</div>
+	</div>
+		<div class="btn_left">打开微信</div>
+		<div class="btn_right">分享到朋友圈</div>
+	</div> -->
+
+</div>
+
+<script type="text/javascript" src="jweixin.js"></script>
+<script type="text/javascript" src="./js/lrz.bundle.js"></script>
+<script type="text/javascript">
+    document.querySelector('input').addEventListener('change', function () {
+        // this.files[0] 是用户选择的文件
+        lrz(this.files[0], {width: 1024})
+            .then(function (rst) {
+                // 把处理的好的图片给用户看看呗
+                $("#image").attr("src",rst.base64);
+                $("#pic").css("background-image","url("+rst.base64+")");
+                return rst;
+            })
+
+            .then(function (rst) {
+                // 这里该上传给后端啦
+
+				/* ==================================================== */
+                // 原生ajax上传代码，所以看起来特别多 ╮(╯_╰)╭，但绝对能用
+                // 其他框架，例如jQuery处理formData略有不同，请自行google，baidu。
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', 'http://localhost:5000/');
+                xhr.onload = function () {
+                    if (xhr.status === 200) {
+                        // 上传成功
+                    } else {
+                        // 处理其他情况
+                    }
+                };
+
+                xhr.onerror = function () {
+                    // 处理错误
+                };
+
+                xhr.upload.onprogress = function (e) {
+                    // 上传进度
+                    var percentComplete = ((e.loaded / e.total) || 0) * 100;
+                };
+
+                // 添加参数
+                rst.formData.append('fileLen', rst.fileLen);
+                rst.formData.append('xxx', '我是其他参数');
+
+                // 触发上传
+                xhr.send(rst.formData);
+				/* ==================================================== */
+				alert(rst.base64);
+                return rst;
+
+            })
+
+            .catch(function (err) {
+                // 万一出错了，这里可以捕捉到错误信息
+                // 而且以上的then都不会执行
+
+                alert(err);
+            })
+
+            .always(function () {
+                // 不管是成功失败，这里都会执行
+            });
+    });
+//    $(function(){
+//        var path,clip = $("#image"),FileReader = window.FileReader;
+//        $("#file").change(function() {
+//            if (FileReader) {//chrome浏览器处理
+//                var reader = new FileReader(),
+//                    file = this.files[0];
+//                reader.onload = function(e) {
+//                    clip.attr("src", e.target.result);//这里是把图片转成64位数据存入<img>中的src里
+//                    $("#pic").css("background-image","url("+e.target.result+")");
+//                };
+//                reader.readAsDataURL(file);
+//                //这里需要延迟一下，否则无法放入文本框内
+//                setTimeout("showchange()",1000);
+//            }
+//            else {//其他浏览器处理
+//                path = $(this).val();
+//                if (/"\w\W"/.test(path)) {
+//                    path = path.slice(1,-1);
+//                }
+//                clip.attr("src",path);
+//            }
+//        });
+//
+//    })
+//    //存入照片数据
+//    function showchange(){
+//        var s1 = $("#image").attr("src");
+//        return($("#files").val(s1));
+//    }
+
+
+</script>
+<a href="#" class="myButton2" onclick={$(".wait").css("display","")}>点击上传</a>
+</body>
+</html>

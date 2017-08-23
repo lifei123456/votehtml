@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://ancai4399.com/jqueryweui/dist/demos/picker.html -->
+<html class="pixel-ratio-3 retina android android-5 android-5-0"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>jQuery WeUI</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <link rel="stylesheet" href="./css/weui.css">
+  <link rel="stylesheet" href="./css/jquery-weui.css">
+  <link rel="stylesheet" href="./css/demos.css">
+
+</head>
+
+<body ontouchstart="">
+<div class="page slideIn cell">
+  <h3 style="text-align: center;color: #3cc51f;">标题</h3>
+  <div class="bd">
+    <div class="weui_cells_title">姓名</div>
+    <div class="weui_cells weui_cells_form">
+      <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+          <input class="weui_input" type="text"  placeholder="请输入">
+        </div>
+      </div>
+    </div>
+    <div class="weui_cells_title">手机号</div>
+    <div class="weui_cells weui_cells_form">
+      <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+          <input class="weui_input" type="number"  placeholder="请输入">
+        </div>
+      </div>
+    </div>
+    <div class="weui_cells_title">快递地址</div>
+    <div class="weui_cells weui_cells_form">
+      <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+          <input class="weui_input" type="text"  placeholder="请输入">
+        </div>
+      </div>
+    </div>
+    <div class="weui_cells_title">单位名称</div>
+    <div class="weui_cells weui_cells_form">
+      <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+          <input class="weui_input" type="text"  placeholder="请输入">
+        </div>
+      </div>
+    </div>
+    <div class="weui_cells_title">所在职位</div>
+    <div class="weui_cells weui_cells_form">
+      <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+          <input class="weui_input" type="text"  placeholder="请输入">
+        </div>
+      </div>
+    </div>
+    <div class="weui_cells_title">工作年限</div>
+    <div class="weui_cells weui_cells_form">
+      <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+          <input class="weui_input" id="mobile" type="text" value="" readonly="">
+        </div>
+      </div>
+    </div>
+    <div class="weui-picker-container">
+      <div class="weui-picker-modal picker-columns  picker-columns-single">
+        <div class="toolbar">
+          <div class="toolbar-inner">
+            <a href="javascript:;" class="picker-button close-picker">完成</a>
+            <h1 class="title">请选择您的工作年限</h1>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="weui_btn_area">
+  <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">提交</a>
+</div>
+<div id="picker-container"></div>
+<script src="./js/jquery-2.1.4.js"></script>
+<script src="./js/jquery-weui.js"></script>
+
+
+<script>
+    $("#mobile").picker({
+        title: "请选择您的工作年限",
+        cols: [
+            {
+                textAlign: 'center',
+                values: ['还在象牙塔修炼', '2年以内', '超过两年了', '五年以上']
+            }
+        ],
+        onChange: function(p, v, dv) {
+            console.log(p, v, dv);
+        },
+        onClose: function(p, v, d) {
+            console.log("close");
+        }
+    });
+</script>
+
+
+</body></html>
